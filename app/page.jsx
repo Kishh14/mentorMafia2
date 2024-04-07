@@ -8,7 +8,6 @@ import Account from "@/components/Account";
 import { useEffect, useState } from "react";
 import { account, database, storage } from "@/lib/appwrite";
 import Mentors from "@/components/Mentors";
-import ChatWindow from "@/components/ChatWindow";
 import Room from "@/components/Room";
 
 export default function Home() {
@@ -147,7 +146,6 @@ export default function Home() {
         <Route path="/profile" element={<Profile isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} profilePicture={profilePicture} userName={userName} profilePictureExist={profilePictureExist} mentorUserId={mentorUserId} setMentorUserId={setMentorUserId} mentorsList={mentorsList} />} />
         <Route path="/account" element={<Account isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} setProfilePicture={setProfilePicture} profilePicture={profilePicture} profilePictureExist={profilePictureExist} setProfilePictureExist={setProfilePictureExist} getProfilePicture={getProfilePicture} userName={userName} setUserName={setUserName} userId={userId} setUserId={setUserId} getAccount={getAccount} />} />
         <Route path="/mentors" element={<Mentors isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} profilePicture={profilePicture} userName={userName} usersList={usersList} mentorsList={mentorsList} profilePictureExist={profilePictureExist} recipientUserId={recipientUserId} setRecipientUserId={setRecipientUserId} userId={userId} mentorUserId={mentorUserId} setMentorUserId={setMentorUserId} />} />
-        <Route path="/chats" element={<ChatWindow recipientUserId={recipientUserId} setRecipientUserId={setRecipientUserId} profilePicture={profilePicture} profilePictureExist={profilePictureExist} userName={userName} />}></Route>
         <Route path="/room/:roomId" element={<Room mentorUserId={mentorUserId} userId={userId} userName={userName} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} profilePicture={profilePicture} profilePictureExist={profilePictureExist} />}></Route>
       </Routes>
     </main>

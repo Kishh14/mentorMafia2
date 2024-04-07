@@ -3,7 +3,6 @@ import Hero from "./Hero";
 import Footer from "./Footer";
 import Account from "./Account";
 import { useState } from "react";
-import ChatWindow from "./ChatWindow";
 
 const Home = ({ isLoggedIn, setIsLoggedIn, profilePicture, userName, profilePictureExist, mentorsList, setMentorUserId }) => {
 
